@@ -1,18 +1,21 @@
 package com.project.graph
 package models
 
+
 trait TGraph[V]{
   def addVertex(vertexID: Int): Unit
 
+  def addVertex(vertex: Vertex[V]): Unit
+
   def removeVertex(vertexID: Int): Unit
 
-  def addEdgeByLabels(firstVertexID: Int, secondVertexID: Int): Unit
+  def removeVertex(vertex: Vertex[V]): Unit
 
-  def removeEdgeByLabels(firstVertexID: Int, secondVertexID: Int): Unit
-
+  def addEdge(firstVertexID: Int, secondVertexID: Int): Unit
   def addEdge(edge: Edge[V]): Unit
   def +(edge: Edge[V]): Unit = addEdge(edge)
 
+  def removeEdge(firstVertexID: Int, secondVertexID: Int): Unit
   def removeEdge(edge: Edge[V]): Unit
   def -(edge: Edge[V]): Unit = removeEdge(edge)
 
@@ -20,7 +23,7 @@ trait TGraph[V]{
 
   def getVertexesAmount(): Int
 
-  def getEdgesForVertex(vertexID: Int): List[Vertex[V]]
+  def getEdgesForVertex(vertexID: Int): Set[Edge[V]]
 
   def hasVertex(vertexID: Int): Boolean
   def hasVertex(vertex: Vertex[V]): Boolean
