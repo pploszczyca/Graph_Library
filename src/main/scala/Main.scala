@@ -1,20 +1,17 @@
 package com.project.graph
 
-import models.Graph
+import models.{Edge, Graph, GraphBuilder}
+import com.project.graph.models.GraphType._
 
 object Main extends App {
-  var graph = new Graph[Int]()
+  val edges = new Edge[Int](1,2) :: new Edge[Int](1,3) :: new Edge[Int](1,4) :: new Edge[Int](2,4) :: Nil
 
-  graph.addVertex(1)
-  graph.addVertex(2)
+  println(edges)
+
+  val graph = GraphBuilder(edges, Undirected)
 
   println(graph.hasVertex(1))
-  println(graph.hasVertex(3))
-
-  print(graph.toString)
-
-//  var tmpMap = Map(1 -> "Test")
-//  println(tmpMap get 1)
-//  println(tmpMap get 2)
+  println(graph.hasEdge(1,2))
+  println(graph.hasEdge(2,1))
 
 }
