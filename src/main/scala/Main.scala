@@ -1,7 +1,8 @@
 package com.project.graph
 
-import models.{Edge, Graph, GraphBuilder}
+import models.{Edge, Graph, GraphBuilder, Vertex}
 
+import com.project.graph.database.DatabaseService
 import com.project.graph.models.GraphType._
 
 object Main extends App {
@@ -11,10 +12,18 @@ object Main extends App {
 
   val graph = GraphBuilder(edges, Undirected)
 
-  println(graph.hasVertex(1))
+  println(graph.hasVertex(2))
   println(graph.hasEdge(1,2))
   println(graph.hasEdge(2,1))
 
-
-
+//  val firstVertex = new Vertex(1, "Test1", 1)
+//  val secondVertex = new Vertex(2, "Test2", 2)
+//  DatabaseService.addVertex(firstVertex)
+//  DatabaseService.addVertex(secondVertex)
+//  DatabaseService.addEdge(firstVertex -> secondVertex)
+//  DatabaseService.addVertex(new Vertex(3))
+//  DatabaseService.addEdge(new Edge(1,3))
+  DatabaseService.addVertex(new Vertex(4, "SampleVertex"))
+  DatabaseService.addEdge(new Edge(2,4))
+  DatabaseService.close()
 }

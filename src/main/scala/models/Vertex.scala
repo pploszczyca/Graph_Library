@@ -1,7 +1,7 @@
 package com.project.graph
 package models
 
-class Vertex (val id: Int, val name: String = null, val value: Double = 0){
+class Vertex (val id: Int, val name: String = "", val value: Double = 0){
 
   def ->(other: Vertex): Edge = new Edge(this, other, value)    // for making new Edge
 
