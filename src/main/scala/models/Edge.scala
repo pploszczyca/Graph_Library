@@ -1,16 +1,16 @@
 package com.project.graph
 package models
 
-class Edge[V](val fromVertex: Vertex[V], val toVertex: Vertex[V], val value: V = null.asInstanceOf[V]) {
+class Edge(val fromVertex: Vertex, val toVertex: Vertex, val value: Double = 0) {
 
   def this(fromVertexID: Int, toVertexID: Int){
-    this(new Vertex[V](fromVertexID), new Vertex[V](toVertexID))
+    this(new Vertex(fromVertexID), new Vertex(toVertexID))
   }
 
-  def canEqual(other: Any): Boolean = other.isInstanceOf[Edge[V]]
+  def canEqual(other: Any): Boolean = other.isInstanceOf[Edge]
 
   override def equals(other: Any): Boolean = other match {
-    case that: Edge[V] =>
+    case that: Edge =>
       (that canEqual this) &&
         fromVertex == that.fromVertex &&
         toVertex == that.toVertex

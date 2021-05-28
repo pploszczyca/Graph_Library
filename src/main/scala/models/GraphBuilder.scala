@@ -4,13 +4,13 @@ package models
 import models.GraphType._
 
 object GraphBuilder {
-  def apply[V](edges: List[Edge[V]], graphType: GraphType): TGraph[V] = graphType match {
-    case Directed => buildGraph(edges, new Graph[V]())
-    case Undirected => buildGraph(edges, new UndirectedGraph[V]())
-    case _ => null.asInstanceOf[TGraph[V]]
+  def apply(edges: List[Edge], graphType: GraphType): TGraph = graphType match {
+    case Directed => buildGraph(edges, new Graph())
+    case Undirected => buildGraph(edges, new UndirectedGraph())
+    case _ => null.asInstanceOf[TGraph]
   }
 
-  private def buildGraph[V](edges: List[Edge[V]], graph: TGraph[V]): TGraph[V] = {
+  private def buildGraph[V](edges: List[Edge], graph: TGraph): TGraph = {
     for(edge <- edges){
       graph.addEdge(edge)
     }

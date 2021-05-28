@@ -5,7 +5,7 @@ import org.scalatest.FunSuite
 
 class GraphTest extends FunSuite {
   test("Add Vertex test") {
-    val graph = new Graph[Int]
+    val graph = new Graph
     graph.addVertex(1)
     graph.addVertex(2)
 
@@ -18,7 +18,7 @@ class GraphTest extends FunSuite {
   }
 
   test("Remove Vertex and vertexes amount test") {
-    val graph = new Graph[Int]
+    val graph = new Graph
 
     assert(graph.getVertexesAmount() === 0)
 
@@ -50,7 +50,7 @@ class GraphTest extends FunSuite {
   }
 
   test("Add edge test") {
-    val graph = new Graph[Int]
+    val graph = new Graph
 
     // Before adding edges
     assert(graph.hasVertex(1) === false)
@@ -62,9 +62,9 @@ class GraphTest extends FunSuite {
     assert(graph.hasEdge(3,1) === false)
 
     // Adding edges
-    graph.addEdge(new Vertex[Int](1) -> new Vertex[Int](2))
-    graph.addEdge(new Vertex[Int](2) -> new Vertex[Int](3))
-    graph.addEdge(new Vertex[Int](3) -> new Vertex[Int](1))
+    graph.addEdge(new Vertex(1) -> new Vertex(2))
+    graph.addEdge(new Vertex(2) -> new Vertex(3))
+    graph.addEdge(new Vertex(3) -> new Vertex(1))
 
     // After adding edges
     assert(graph.hasVertex(1) === true)
@@ -89,10 +89,10 @@ class GraphTest extends FunSuite {
   }
 
   test("Remove edge test") {
-    val graph = new Graph[Int]
-    graph.addEdge(new Vertex[Int](1) -> new Vertex[Int](2))
-    graph.addEdge(new Vertex[Int](2) -> new Vertex[Int](3))
-    graph.addEdge(new Vertex[Int](3) -> new Vertex[Int](1))
+    val graph = new Graph
+    graph.addEdge(new Vertex(1) -> new Vertex(2))
+    graph.addEdge(new Vertex(2) -> new Vertex(3))
+    graph.addEdge(new Vertex(3) -> new Vertex(1))
 
     assert(graph.hasEdge(1,2) === true)
     assert(graph.hasEdge(2,3) === true)
@@ -103,7 +103,7 @@ class GraphTest extends FunSuite {
     assert(graph.hasEdge(2,3) === true)
     assert(graph.hasEdge(3,1) === true)
 
-    graph.removeEdge(new Edge[Int](2,3))
+    graph.removeEdge(new Edge(2,3))
     assert(graph.hasEdge(1,2) === false)
     assert(graph.hasEdge(2,3) === false)
     assert(graph.hasEdge(3,1) === true)
@@ -115,8 +115,8 @@ class GraphTest extends FunSuite {
   }
 
   test("Get vertex test") {
-    val graph = new Graph[String]
-    val vertex = new Vertex[String](1)
+    val graph = new Graph
+    val vertex = new Vertex(1)
 
     graph.addVertex(vertex)
     assert(vertex === graph.getVertex(1))
@@ -125,7 +125,7 @@ class GraphTest extends FunSuite {
   }
 
   test("Get Edges for Vertex test") {
-    val graph = new Graph[String]
+    val graph = new Graph
     graph.addEdge(1,2)
     graph.addEdge(1,3)
     graph.addEdge(2,3)
@@ -133,14 +133,14 @@ class GraphTest extends FunSuite {
 
     var edgesOfVertexOne = graph.getEdgesForVertex(1)
 
-    assert((edgesOfVertexOne contains new Edge[String](1,2)) === true)
-    assert((edgesOfVertexOne contains new Edge[String](1,3)) === true)
-    assert((edgesOfVertexOne contains new Edge[String](2,3)) === false)
-    assert((edgesOfVertexOne contains new Edge[String](1,4)) === false)
+    assert((edgesOfVertexOne contains new Edge(1,2)) === true)
+    assert((edgesOfVertexOne contains new Edge(1,3)) === true)
+    assert((edgesOfVertexOne contains new Edge(2,3)) === false)
+    assert((edgesOfVertexOne contains new Edge(1,4)) === false)
 
     graph.removeEdge(1,2)
     edgesOfVertexOne = graph.getEdgesForVertex(1)
-    assert((edgesOfVertexOne contains new Edge[String](1,2)) === false)
-    assert((edgesOfVertexOne contains new Edge[String](1,3)) === true)
+    assert((edgesOfVertexOne contains new Edge(1,2)) === false)
+    assert((edgesOfVertexOne contains new Edge(1,3)) === true)
   }
 }

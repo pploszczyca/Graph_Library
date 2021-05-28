@@ -5,7 +5,7 @@ import org.scalatest.FunSuite
 
 class UndirectedGraphTest extends FunSuite{
   test("Adding and removing edges") {
-    val undirectedGraph = new UndirectedGraph[Int]()
+    val undirectedGraph = new UndirectedGraph()
 
     undirectedGraph.addEdge(1,2)
     undirectedGraph.addEdge(2,3)

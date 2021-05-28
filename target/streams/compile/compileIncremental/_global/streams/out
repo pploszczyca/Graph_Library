@@ -1,38 +1,34 @@
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] IncrementalCompile -----------[0m
 [0m[[0m[0mdebug[0m] [0m[0mIncrementalCompile.incrementalCompile[0m
-[0m[[0m[0mdebug[0m] [0m[0mprevious = Stamps for: 14 products, 8 sources, 1 libraries[0m
-[0m[[0m[0mdebug[0m] [0m[0mcurrent source = Set(${BASE}/src/main/scala/models/Graph.scala, ${BASE}/src/main/scala/models/Edge.scala, ${BASE}/src/main/scala/models/GraphBuilder.scala, ${BASE}/src/main/scala/models/UndirectedGraph.scala, ${BASE}/src/main/scala/Main.scala, ${BASE}/src/main/scala/models/Vertex.scala, ${BASE}/src/main/scala/models/GraphType.scala, ${BASE}/src/main/scala/models/TGraph.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0m> initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(${BASE}/src/main/scala/Main.scala), unmodified = ...),Set(),Set(),API Changes: Set())[0m
+[0m[[0m[0mdebug[0m] [0m[0mprevious = Stamps for: 17 products, 10 sources, 1 libraries[0m
+[0m[[0m[0mdebug[0m] [0m[0mcurrent source = Set(${BASE}/src/main/scala/database/models/VertexTable.scala, ${BASE}/src/main/scala/models/Graph.scala, ${BASE}/src/main/scala/models/Edge.scala, ${BASE}/src/main/scala/models/GraphBuilder.scala, ${BASE}/src/main/scala/models/UndirectedGraph.scala, ${BASE}/src/main/scala/Main.scala, ${BASE}/src/main/scala/database/DatabaseService.scala, ${BASE}/src/main/scala/models/Vertex.scala, ${BASE}/src/main/scala/models/GraphType.scala, ${BASE}/src/main/scala/models/TGraph.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(${BASE}/src/main/scala/database/DatabaseService.scala, ${BASE}/src/main/scala/database/models/VertexTable.scala, ${BASE}/src/main/scala/models/Edge.scala, ${BASE}/src/main/scala/models/UndirectedGraph.scala, ${BASE}/src/main/scala/models/Vertex.scala, ${BASE}/src/main/scala/models/Graph.scala, ${BASE}/src/main/scala/models/TGraph.scala, ${BASE}/src/main/scala/models/GraphBuilder.scala, ${BASE}/src/main/scala/Main.scala), unmodified = ...),Set(),Set(),API Changes: Set())[0m
 [0m[[0m[0mdebug[0m] [0m[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mInitial source changes:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	removed: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(${BASE}/src/main/scala/Main.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(${BASE}/src/main/scala/database/models/VertexTable.scala, ${BASE}/src/main/scala/models/Graph.scala, ${BASE}/src/main/scala/models/Edge.scala, ${BASE}/src/main/scala/models/GraphBuilder.scala, ${BASE}/src/main/scala/models/UndirectedGraph.scala, ${BASE}/src/main/scala/Main.scala, ${BASE}/src/main/scala/database/DatabaseService.scala, ${BASE}/src/main/scala/models/Vertex.scala, ${BASE}/src/main/scala/models/TGraph.scala)[0m
 [0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(com.project.graph.Main)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(com.project.graph.models.Vertex, com.project.graph.models.Edge, com.project.graph.models.Graph, com.project.graph.database.models.VertexTable, com.project.graph.models.TGraph, com.project.graph.Main, com.project.graph.models.UndirectedGraph, com.project.graph.database.DatabaseService, com.project.graph.models.GraphBuilder)[0m
 [0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(com.project.graph.Main)[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(${BASE}/src/main/scala/Main.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: com.project.graph.Main[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(com.project.graph.models.Vertex, com.project.graph.models.Edge, com.project.graph.models.Graph, com.project.graph.database.models.VertexTable, com.project.graph.models.TGraph, com.project.graph.Main, com.project.graph.models.UndirectedGraph, com.project.graph.database.DatabaseService, com.project.graph.models.GraphBuilder)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(${BASE}/src/main/scala/database/models/VertexTable.scala, ${BASE}/src/main/scala/models/Graph.scala, ${BASE}/src/main/scala/models/Edge.scala, ${BASE}/src/main/scala/models/GraphBuilder.scala, ${BASE}/src/main/scala/models/UndirectedGraph.scala, ${BASE}/src/main/scala/Main.scala, ${BASE}/src/main/scala/database/DatabaseService.scala, ${BASE}/src/main/scala/models/Vertex.scala, ${BASE}/src/main/scala/models/TGraph.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: com.project.graph.models.Vertex, com.project.graph.models.Edge, com.project.graph.models.Graph, com.project.graph.database.models.VertexTable, com.project.graph.models.TGraph, com.project.graph.Main, com.project.graph.models.UndirectedGraph, com.project.graph.database.DatabaseService, com.project.graph.models.GraphBuilder[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding com.project.graph.models.UndirectedGraph by com.project.graph.models.Graph[0m
+[0m[[0m[0mdebug[0m] [0m[0mRecompiling all sources: number of invalidated sources > 50.0% of all sources[0m
 [0m[[0m[0mdebug[0m] [0m[0mcompilation cycle 1[0m
-[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/pepe/Projekty/Semestr4/ScalaLab/Graph_Library/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 10 Scala sources to /home/pepe/Projekty/Semestr4/ScalaLab/Graph_Library/target/scala-2.13/classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.13:1.5.3:compile for Scala 2.13.6[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 2bbdd52d for Scala compiler version 2.13.6[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 5e93646d for Scala compiler version 2.13.6[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/home/pepe/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.6/scala-library-2.13.6.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
-[0m[[0m[0mdebug[0m] [0m[0m	/home/pepe/Projekty/Semestr4/ScalaLab/Graph_Library/target/scala-2.13/classes[0m
-[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: [0m
-[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
-[0m[[0m[0mdebug[0m] [0m[0mFinal step, transitive dependencies:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mNo classes were invalidated.[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.164110257 s[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/home/pepe/Projekty/Semestr4/ScalaLab/Graph_Library/target/scala-2.13/classes:/home/pepe/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/slick/slick_2.13/3.3.3/slick_2.13-3.3.3.jar:/home/pepe/.cache/coursier/v1/https/repo1.maven.org/maven2/org/xerial/sqlite-jdbc/3.7.2/sqlite-jdbc-3.7.2.jar:/home/pepe/.cache/coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/pepe/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/config/1.3.2/config-1.3.2.jar:/home/pepe/.cache/coursier/v1/https/repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2.jar:/home/pepe/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_2.13/2.0.0/scala-collection-compat_2.13-2.0.0.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 2.367261507 s[0m
 [0m[[0m[0minfo[0m] [0m[0mdone compiling[0m

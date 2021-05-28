@@ -1,11 +1,19 @@
 [0m[[0m[0mdebug[0m] [0m[0mPackaging /home/pepe/Projekty/Semestr4/ScalaLab/Graph_Library/target/scala-2.13/graph_library_2.13-0.1.jar ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	application.conf[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/pepe/Projekty/Semestr4/ScalaLab/Graph_Library/target/scala-2.13/classes/application.conf[0m
 [0m[[0m[0mdebug[0m] [0m[0m	com[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/pepe/Projekty/Semestr4/ScalaLab/Graph_Library/target/scala-2.13/classes/com[0m
 [0m[[0m[0mdebug[0m] [0m[0m	com/project[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/pepe/Projekty/Semestr4/ScalaLab/Graph_Library/target/scala-2.13/classes/com/project[0m
 [0m[[0m[0mdebug[0m] [0m[0m	com/project/graph[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/pepe/Projekty/Semestr4/ScalaLab/Graph_Library/target/scala-2.13/classes/com/project/graph[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/project/graph/database[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/pepe/Projekty/Semestr4/ScalaLab/Graph_Library/target/scala-2.13/classes/com/project/graph/database[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/project/graph/database/DatabaseService$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/pepe/Projekty/Semestr4/ScalaLab/Graph_Library/target/scala-2.13/classes/com/project/graph/database/DatabaseService$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/project/graph/database/DatabaseService.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/pepe/Projekty/Semestr4/ScalaLab/Graph_Library/target/scala-2.13/classes/com/project/graph/database/DatabaseService.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	com/project/graph/Main$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/pepe/Projekty/Semestr4/ScalaLab/Graph_Library/target/scala-2.13/classes/com/project/graph/Main$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	com/project/graph/Main.class[0m

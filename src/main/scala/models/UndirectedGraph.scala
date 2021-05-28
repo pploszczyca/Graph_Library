@@ -1,13 +1,13 @@
 package com.project.graph
 package models
 
-class UndirectedGraph[V] extends Graph[V] with TGraph[V] {
+class UndirectedGraph extends Graph with TGraph {
   override def addEdge(firstVertexID: Int, secondVertexID: Int): Unit = {
     super.addEdge(firstVertexID, secondVertexID)
     super.addEdge(secondVertexID, firstVertexID)
   }
 
-  override def addEdge(edge: Edge[V]): Unit = {
+  override def addEdge(edge: Edge): Unit = {
     super.addEdge(edge)
     super.addEdge(edge.toVertex -> edge.fromVertex)
   }
@@ -17,7 +17,7 @@ class UndirectedGraph[V] extends Graph[V] with TGraph[V] {
     super.removeEdge(secondVertexID, firstVertexID)
   }
 
-  override def removeEdge(edge: Edge[V]): Unit = {
+  override def removeEdge(edge: Edge): Unit = {
     super.removeEdge(edge)
     super.removeEdge(edge.toVertex -> edge.fromVertex)
   }
