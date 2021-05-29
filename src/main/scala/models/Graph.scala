@@ -18,7 +18,6 @@ class Graph[V] extends TGraph[V] {
       edges += (vertex.id -> MutableSet[Edge[V]]())
     }
   }
-
   override def removeVertex(vertexID: Int): Unit = {
     vertexes -= vertexID;
 
@@ -64,4 +63,9 @@ class Graph[V] extends TGraph[V] {
   override def hasEdge(firstVertexID: Int, secondVertexID: Int): Boolean = hasVertex(firstVertexID) && hasVertex(secondVertexID) && hasEdge(getVertex(firstVertexID)-> getVertex(secondVertexID))
 
   override def printVertex(vertexID: Int): Unit = vertexes(vertexID).toString
+
+  def BFS(startVertexID: Int):Unit = {
+
+  }
+
 }
