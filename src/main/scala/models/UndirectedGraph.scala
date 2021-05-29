@@ -21,4 +21,14 @@ class UndirectedGraph extends Graph with TGraph {
     super.removeEdge(edge)
     super.removeEdge(edge.toVertex -> edge.fromVertex)
   }
+
+  override def cloneGraph(): TGraph = {
+    val graph: TGraph = new UndirectedGraph
+
+    vertexes.values.foreach(v => graph.addVertex(v))
+
+    vertexes.keys.foreach(v => getEdgesForVertex(v).foreach(e => graph.addEdge(e)))
+
+    graph
+  }
 }

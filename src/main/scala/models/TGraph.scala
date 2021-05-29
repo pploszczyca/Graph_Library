@@ -1,8 +1,11 @@
 package com.project.graph
 package models
 
+import scala.collection.mutable.{Map => MutableMap}
 
 trait TGraph{
+  var vertexes :MutableMap[Int, Vertex]
+
   def addVertex(vertexID: Int): Unit
 
   def addVertex(vertex: Vertex): Unit
@@ -21,6 +24,8 @@ trait TGraph{
 
   def getVertex(vertexID: Int): Vertex
 
+  def getVertexesIDs(): List[Int]
+
   def getVertexesAmount(): Int
 
   def getEdgesForVertex(vertexID: Int): Set[Edge]
@@ -32,4 +37,6 @@ trait TGraph{
   def hasEdge(edge: Edge): Boolean
 
   def printVertex(vertexID: Int): Unit
+
+  def cloneGraph(): TGraph
 }

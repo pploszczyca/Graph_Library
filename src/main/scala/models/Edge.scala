@@ -7,6 +7,10 @@ class Edge(val fromVertex: Vertex, val toVertex: Vertex, val value: Double = 0) 
     this(new Vertex(fromVertexID), new Vertex(toVertexID))
   }
 
+  def this(fromVertexID: Int, toVertexID: Int, value: Double){
+    this(new Vertex(fromVertexID), new Vertex(toVertexID), value)
+  }
+
   def canEqual(other: Any): Boolean = other.isInstanceOf[Edge]
 
   override def equals(other: Any): Boolean = other match {

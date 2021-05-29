@@ -6,7 +6,7 @@ import scala.collection.mutable.{Set => MutableSet}
 
 class Graph extends TGraph {
   var vertexes :MutableMap[Int, Vertex] = MutableMap[Int, Vertex]()
-  var edges :MutableMap[Int, MutableSet[Edge]] = MutableMap[Int, MutableSet[Edge]]()    // key is for fromVertex
+  private var edges :MutableMap[Int, MutableSet[Edge]] = MutableMap[Int, MutableSet[Edge]]()    // key is for fromVertex
 
   override def addVertex(vertexID: Int): Unit = {
     addVertex(new Vertex(vertexID))
@@ -64,4 +64,15 @@ class Graph extends TGraph {
   override def hasEdge(firstVertexID: Int, secondVertexID: Int): Boolean = hasVertex(firstVertexID) && hasVertex(secondVertexID) && hasEdge(getVertex(firstVertexID)-> getVertex(secondVertexID))
 
   override def printVertex(vertexID: Int): Unit = vertexes(vertexID).toString
+
+  override def getVertexesIDs(): List[Int] = vertexes.keys.toList
+
+  override def cloneGraph(): TGraph = {
+    val graph: TGraph = new Graph
+
+    vertexes.values.foreach(v => graph.addVertex(v))
+    edges.values.foreach(eSet => eSet.foreach(e => graph.addEdge(e)))
+
+    graph
+  }
 }
