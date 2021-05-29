@@ -1,0 +1,30 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(__runWatch console0, Some(a9ab89b7-9616-4109-ac4f-f3cf8768cd4f), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(sbtStashOnFailure, None, Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(__preWatch console0, None, Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(run, None, Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/pepe/Projekty/Semestr4/ScalaLab/Graph_Library/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/home/pepe/Projekty/Semestr4/ScalaLab/Graph_Library/src/main/scala/database/models/VertexTable.scala:15:37: slick.model.Table does not take type parameters[0m
+[0m[[0m[31merror[0m] [0m[0mclass VertexTable(tag: Tag) extends Table[Vertex](tag, "Vertex"){[0m
+[0m[[0m[31merror[0m] [0m[0m                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/pepe/Projekty/Semestr4/ScalaLab/Graph_Library/src/main/scala/database/models/VertexTable.scala:15:51: no arguments allowed for nullary constructor Object: (): Object[0m
+[0m[[0m[31merror[0m] [0m[0mclass VertexTable(tag: Tag) extends Table[Vertex](tag, "Vertex"){[0m
+[0m[[0m[31merror[0m] [0m[0m                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/pepe/Projekty/Semestr4/ScalaLab/Graph_Library/src/main/scala/database/models/VertexTable.scala:16:12: not found: value column[0m
+[0m[[0m[31merror[0m] [0m[0m  def id = column[Int]("ID", PrimaryKey)[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/pepe/Projekty/Semestr4/ScalaLab/Graph_Library/src/main/scala/database/models/VertexTable.scala:17:14: not found: value column[0m
+[0m[[0m[31merror[0m] [0m[0m  def name = column[String]("name")[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/pepe/Projekty/Semestr4/ScalaLab/Graph_Library/src/main/scala/database/models/VertexTable.scala:18:15: not found: value column[0m
+[0m[[0m[31merror[0m] [0m[0m  def value = column[Double]("value")[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m5 errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 0 s, completed 28 maj 2021, 20:35:44[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(resumeFromFailure, None, Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(sbtPopOnFailure, None, Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(__postWatch console0, None, Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(resumeFromFailure, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(__waitWatch console0, None, None)[0m
