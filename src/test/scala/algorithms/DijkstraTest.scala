@@ -1,8 +1,9 @@
 package com.project.graph
 package algorithms
 
-import com.project.graph.models.GraphType.Directed
-import com.project.graph.models.{Edge, GraphBuilder}
+import models.GraphType.Directed
+import models.{Edge, GraphBuilder}
+
 import org.scalatest.FunSuite
 
 class DijkstraTest extends FunSuite {

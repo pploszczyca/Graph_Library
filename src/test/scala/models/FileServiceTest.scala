@@ -1,9 +1,9 @@
 package com.project.graph
 package models
 
-import org.scalatest.FunSuite
-
 import models.GraphType._
+
+import org.scalatest.FunSuite
 
 class FileServiceTest extends FunSuite {
   test("File read") {
