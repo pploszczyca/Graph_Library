@@ -1,8 +1,9 @@
 package com.project.graph
 package algorithms
 
-import com.project.graph.models.GraphType.{Directed, Undirected}
-import com.project.graph.models.{Edge, GraphBuilder}
+import models.GraphType.Undirected
+import models.{Edge, GraphBuilder}
+
 import org.scalatest.FunSuite
 
 class EulerTest extends FunSuite {

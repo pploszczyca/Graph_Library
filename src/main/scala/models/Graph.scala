@@ -6,7 +6,7 @@ import scala.collection.mutable.{Set => MutableSet}
 
 class Graph extends TGraph {
   var vertexes :MutableMap[Int, Vertex] = MutableMap[Int, Vertex]()
-  private var edges :MutableMap[Int, MutableSet[Edge]] = MutableMap[Int, MutableSet[Edge]]()    // key is for fromVertex
+  private val edges :MutableMap[Int, MutableSet[Edge]] = MutableMap[Int, MutableSet[Edge]]()    // key is for fromVertex
 
   override def addVertex(vertexID: Int): Unit = {
     addVertex(new Vertex(vertexID))

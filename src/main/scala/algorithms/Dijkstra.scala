@@ -7,8 +7,8 @@ import scala.collection.mutable
 import scala.collection.mutable.{Map => MutableMap}
 
 object Dijkstra {
-  private var parents = MutableMap[Int, Int]()
-  private var distance = MutableMap[Int, Double]()
+  private val parents = MutableMap[Int, Int]()
+  private val distance = MutableMap[Int, Double]()
 
   private def relax(edge: Edge): Boolean = {
     if (distance(edge.fromVertex.id) + edge.value < distance(edge.toVertex.id)){
@@ -49,7 +49,7 @@ object Dijkstra {
 
       val vEdges = G.getEdgesForVertex(v)
 
-      vEdges.filter(relax(_)).map(_.toVertex.id).foreach(v => q.enqueue(v) )
+      vEdges.filter(relax).map(_.toVertex.id).foreach(v => q.enqueue(v) )
     }
 
     (getParent(endVertexID), distance(endVertexID))

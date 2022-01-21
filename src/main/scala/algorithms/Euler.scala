@@ -1,16 +1,16 @@
 package com.project.graph
 package algorithms
 
-import models.{Edge, TGraph}
+import models.TGraph
 
 object Euler {
   def isEulerian(G: TGraph): Boolean = {
-    IsConnected(G) && G.getVertexesIDs().filter(G.getEdgesForVertex(_).size %2 == 1).length == 0
+    IsConnected(G) && !G.getVertexesIDs().exists(G.getEdgesForVertex(_).size % 2 == 1)
   }
 
   def eulerCicle(G: TGraph): List[Int] = {
     val GCopy: TGraph = G.cloneGraph()
-    var stack = List[Int](GCopy.getVertexesIDs()(0))
+    var stack = List[Int](GCopy.getVertexesIDs().head)
     var result = List[Int]()
 
     def DFSVisit(): Unit = {

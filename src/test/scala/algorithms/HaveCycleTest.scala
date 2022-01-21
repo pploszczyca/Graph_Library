@@ -18,7 +18,7 @@ class HaveCycleTest extends FunSuite {
     notCyclicGraph.addEdge(2, 4)
     notCyclicGraph.addEdge(4, 5)
 
-    assert(HaveCycle(cyclicGraph) == true)
-    assert(HaveCycle(notCyclicGraph) == false)
+    assert(HaveCycle(cyclicGraph))
+    assert(!HaveCycle(notCyclicGraph))
   }
 }

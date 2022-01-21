@@ -1,6 +1,7 @@
-package com.project.graph.algorithms
+package com.project.graph
+package algorithms
 
-import com.project.graph.models.{Edge, TGraph, Vertex}
+import models.{Edge, TGraph, Vertex}
 
 object DFS {
   def apply(G:TGraph, startVertexID: Int): List[Int] = {

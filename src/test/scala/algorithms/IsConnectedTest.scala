@@ -13,7 +13,7 @@ class IsConnectedTest extends FunSuite {
     graphConnected.addEdge(2, 4)
     graphConnected.addEdge(4, 5)
 
-    assert(IsConnected(graphConnected) == true)
+    assert(IsConnected(graphConnected))
 
     val graphDisconnected = new Graph
 
@@ -22,6 +22,6 @@ class IsConnectedTest extends FunSuite {
     graphDisconnected.addEdge(5, 4)
     graphDisconnected.addEdge(4, 5)
 
-    assert(IsConnected(graphDisconnected) == false)
+    assert(!IsConnected(graphDisconnected))
   }
 }
